@@ -14,4 +14,8 @@
     <Folder Include="Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AP.BTP.Domain\AP.BTP.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

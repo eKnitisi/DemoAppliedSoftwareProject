@@ -1,4 +1,6 @@
-﻿namespace AP.BTP.Application
+﻿using AP.BTP.Domain;
+
+namespace AP.BTP.Application
 {
     internal class Program
     {

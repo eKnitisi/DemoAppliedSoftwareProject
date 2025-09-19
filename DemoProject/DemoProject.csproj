@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AP.BTP.Application\AP.BTP.Application.csproj" />
+    <ProjectReference Include="..\AP.BTP.Domain\AP.BTP.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
