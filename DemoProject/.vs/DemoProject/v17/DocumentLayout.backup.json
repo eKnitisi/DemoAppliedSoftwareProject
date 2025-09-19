@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{28A4100E-FD19-43D7-94FF-C81B1B9497E0}|..\\AP.BTP.Application\\AP.BTP.Application.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1789D64F-BC36-4E2E-887F-DB19B788C559}|..\\AP.BTP.Domain\\AP.BTP.Domain.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,12 +37,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Program.cs",
+              "RelativeDocumentMoniker": "..\\AP.BTP.Application\\Program.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Program.cs*",
+              "RelativeToolTip": "..\\AP.BTP.Application\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T09:24:13.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Domain\\Class1.cs",
               "RelativeDocumentMoniker": "..\\AP.BTP.Domain\\Class1.cs",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Domain\\Class1.cs",
-              "RelativeToolTip": "..\\AP.BTP.Domain\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Domain\\Class1.cs*",
+              "RelativeToolTip": "..\\AP.BTP.Domain\\Class1.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-19T08:53:21.905Z",
               "EditorCaption": ""
