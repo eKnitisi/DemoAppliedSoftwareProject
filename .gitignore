@@ -1,0 +1,71 @@
+## Visual Studio algemene bestanden
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build resultaten
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+
+## NuGet packages
+*.nupkg
+*.snupkg
+*.nuspec
+*.psmdcp
+packages/
+*.nuget.props
+*.nuget.targets
+
+## .NET tooling
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*_i.c
+*_p.c
+*_h.h
+*.dbmdl
+*.bak
+*.backup
+*.BLOB
+*.mdf
+*.ldf
+
+## Blazor specifieke bestanden
+wwwroot/dist/
+wwwroot/*.gz
+wwwroot/*.br
+
+## Visual Studio instellingen
+*.DotSettings.user
+*.DotSettings
+
+## Rider / JetBrains
+.idea/
+*.sln.iml
+
+## VSCode settings
+.history/
+*.code-workspace
+
+## Publish output
+publish/
+*.pubxml
+*.pubxml.user
+
+## User secrets (niet delen in Git!)
+secrets.json
+
+## Logs
+*.log
+Logs/
+
+## Temporary files
+~$*
+*.tmp
+*.temp
+*.tmp_proj
