@@ -1,22 +1,18 @@
-﻿using System;
+﻿using AP.BTP.Domain;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AP.BTP.Domain
+namespace AP.BTP.Application.CQRS
 {
-    public class City
+    public class CityDTO
     {
-        [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-
         public int Population { get; set; }
-        
-        public int CountryId { get; set; }
 
-        public Country Country { get; set; }
+        public int CountryId { get; set; }
     }
 }
