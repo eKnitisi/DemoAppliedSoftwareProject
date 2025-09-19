@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "AP.BTP.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "AP.BTP.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AP.BTP.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AP.BTP.Application.dll": {}
+        }
+      },
+      "AP.BTP.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/AP.BTP.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AP.BTP.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "AP.BTP.Application/1.0.0": {
+      "type": "project",
+      "path": "../AP.BTP.Application/AP.BTP.Application.csproj",
+      "msbuildProject": "../AP.BTP.Application/AP.BTP.Application.csproj"
+    },
+    "AP.BTP.Domain/1.0.0": {
+      "type": "project",
+      "path": "../AP.BTP.Domain/AP.BTP.Domain.csproj",
+      "msbuildProject": "../AP.BTP.Domain/AP.BTP.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "AP.BTP.Application >= 1.0.0",
+      "AP.BTP.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Gebruiker\\.nuget\\packages\\": {}
@@ -34,7 +72,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\AP.BTP.Application.csproj": {
+              "projectPath": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\AP.BTP.Application.csproj"
+            },
+            "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Domain\\AP.BTP.Domain.csproj": {
+              "projectPath": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Domain\\AP.BTP.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
