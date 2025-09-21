@@ -3,68 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{28A4100E-FD19-43D7-94FF-C81B1B9497E0}|..\\AP.BTP.Application\\AP.BTP.Application.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.application\\interfaces\\icityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D5DA52B2-C65E-416D-8D2D-F0CEC8D257E9}|..\\AP.BTP.Infrastructure\\AP.BTP.Infrastructure.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.infrastructure\\extensions\\registrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FDAA9F5-1BBB-42E0-A31C-14B827B2A8A8}|DemoProject.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\demoproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FDAA9F5-1BBB-42E0-A31C-14B827B2A8A8}|DemoProject.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D5DA52B2-C65E-416D-8D2D-F0CEC8D257E9}|..\\AP.BTP.Infrastructure\\AP.BTP.Infrastructure.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.infrastructure\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28A4100E-FD19-43D7-94FF-C81B1B9497E0}|..\\AP.BTP.Application\\AP.BTP.Application.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.application\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28A4100E-FD19-43D7-94FF-C81B1B9497E0}|..\\AP.BTP.Application\\AP.BTP.Application.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.application\\interfaces\\icountryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28A4100E-FD19-43D7-94FF-C81B1B9497E0}|..\\AP.BTP.Application\\AP.BTP.Application.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.application\\interfaces\\icountryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{28A4100E-FD19-43D7-94FF-C81B1B9497E0}|..\\AP.BTP.Application\\AP.BTP.Application.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.application\\services\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{28A4100E-FD19-43D7-94FF-C81B1B9497E0}|..\\AP.BTP.Application\\AP.BTP.Application.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.application\\interfaces\\icityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D5DA52B2-C65E-416D-8D2D-F0CEC8D257E9}|..\\AP.BTP.Infrastructure\\AP.BTP.Infrastructure.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.infrastructure\\ap.btp.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{D5DA52B2-C65E-416D-8D2D-F0CEC8D257E9}|..\\AP.BTP.Infrastructure\\AP.BTP.Infrastructure.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.infrastructure\\uow\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FDAA9F5-1BBB-42E0-A31C-14B827B2A8A8}|DemoProject.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\demoproject\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FDAA9F5-1BBB-42E0-A31C-14B827B2A8A8}|DemoProject.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{28A4100E-FD19-43D7-94FF-C81B1B9497E0}|..\\AP.BTP.Application\\AP.BTP.Application.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.application\\interfaces\\icityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FDAA9F5-1BBB-42E0-A31C-14B827B2A8A8}|DemoProject.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\demoproject\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FDAA9F5-1BBB-42E0-A31C-14B827B2A8A8}|DemoProject.csproj|solutionrelative:components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{28A4100E-FD19-43D7-94FF-C81B1B9497E0}|..\\AP.BTP.Application\\AP.BTP.Application.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.application\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5DA52B2-C65E-416D-8D2D-F0CEC8D257E9}|..\\AP.BTP.Infrastructure\\AP.BTP.Infrastructure.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.infrastructure\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5DA52B2-C65E-416D-8D2D-F0CEC8D257E9}|..\\AP.BTP.Infrastructure\\AP.BTP.Infrastructure.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.infrastructure\\repositories\\cityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A4100E-FD19-43D7-94FF-C81B1B9497E0}|..\\AP.BTP.Application\\AP.BTP.Application.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.application\\ap.btp.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28A4100E-FD19-43D7-94FF-C81B1B9497E0}|..\\AP.BTP.Application\\AP.BTP.Application.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FDAA9F5-1BBB-42E0-A31C-14B827B2A8A8}|DemoProject.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\demoproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2FDAA9F5-1BBB-42E0-A31C-14B827B2A8A8}|DemoProject.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1789D64F-BC36-4E2E-887F-DB19B788C559}|..\\AP.BTP.Domain\\AP.BTP.Domain.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.domain\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1789D64F-BC36-4E2E-887F-DB19B788C559}|..\\AP.BTP.Domain\\AP.BTP.Domain.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.domain\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FDAA9F5-1BBB-42E0-A31C-14B827B2A8A8}|DemoProject.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\demoproject\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FDAA9F5-1BBB-42E0-A31C-14B827B2A8A8}|DemoProject.csproj|solutionrelative:components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FDAA9F5-1BBB-42E0-A31C-14B827B2A8A8}|DemoProject.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\demoproject\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FDAA9F5-1BBB-42E0-A31C-14B827B2A8A8}|DemoProject.csproj|solutionrelative:components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FDAA9F5-1BBB-42E0-A31C-14B827B2A8A8}|DemoProject.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\demoproject\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FDAA9F5-1BBB-42E0-A31C-14B827B2A8A8}|DemoProject.csproj|solutionrelative:components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FDAA9F5-1BBB-42E0-A31C-14B827B2A8A8}|DemoProject.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\demoproject\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FDAA9F5-1BBB-42E0-A31C-14B827B2A8A8}|DemoProject.csproj|solutionrelative:components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28A4100E-FD19-43D7-94FF-C81B1B9497E0}|..\\AP.BTP.Application\\AP.BTP.Application.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.application\\cqrs\\countrydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28A4100E-FD19-43D7-94FF-C81B1B9497E0}|..\\AP.BTP.Application\\AP.BTP.Application.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.application\\cqrs\\citydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28A4100E-FD19-43D7-94FF-C81B1B9497E0}|..\\AP.BTP.Application\\AP.BTP.Application.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.application\\ap.btp.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{28A4100E-FD19-43D7-94FF-C81B1B9497E0}|..\\AP.BTP.Application\\AP.BTP.Application.csproj|c:\\users\\gebruiker\\desktop\\school pc\\3e jaar it\\software project\\demoappliedsoftwareproject\\ap.btp.application\\extensions\\registrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,249 +74,184 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Interfaces\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "..\\AP.BTP.Application\\Interfaces\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Interfaces\\IUnitOfWork.cs",
-              "RelativeToolTip": "..\\AP.BTP.Application\\Interfaces\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T10:51:27.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ICountryService.cs",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Interfaces\\ICountryService.cs",
-              "RelativeDocumentMoniker": "..\\AP.BTP.Application\\Interfaces\\ICountryService.cs",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Interfaces\\ICountryService.cs",
-              "RelativeToolTip": "..\\AP.BTP.Application\\Interfaces\\ICountryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T10:51:16.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ICountryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Interfaces\\ICountryRepository.cs",
-              "RelativeDocumentMoniker": "..\\AP.BTP.Application\\Interfaces\\ICountryRepository.cs",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Interfaces\\ICountryRepository.cs",
-              "RelativeToolTip": "..\\AP.BTP.Application\\Interfaces\\ICountryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T10:51:02.04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ICityService.cs",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Interfaces\\ICityService.cs",
-              "RelativeDocumentMoniker": "..\\AP.BTP.Application\\Interfaces\\ICityService.cs",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Interfaces\\ICityService.cs",
-              "RelativeToolTip": "..\\AP.BTP.Application\\Interfaces\\ICityService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T10:50:50.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ICityRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Interfaces\\ICityRepository.cs",
-              "RelativeDocumentMoniker": "..\\AP.BTP.Application\\Interfaces\\ICityRepository.cs",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Interfaces\\ICityRepository.cs*",
-              "RelativeToolTip": "..\\AP.BTP.Application\\Interfaces\\ICityRepository.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T10:50:35.137Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Infrastructure\\Program.cs",
-              "RelativeDocumentMoniker": "..\\AP.BTP.Infrastructure\\Program.cs",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Infrastructure\\Program.cs",
-              "RelativeToolTip": "..\\AP.BTP.Infrastructure\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T10:40:27.379Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AP.BTP.Infrastructure",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Infrastructure\\AP.BTP.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "..\\AP.BTP.Infrastructure\\AP.BTP.Infrastructure.csproj",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Infrastructure\\AP.BTP.Infrastructure.csproj",
-              "RelativeToolTip": "..\\AP.BTP.Infrastructure\\AP.BTP.Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-19T10:40:23.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T10:40:06.519Z",
+              "WhenOpened": "2025-09-21T19:34:38.15Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\Components\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\Components\\Pages\\Home.razor*",
-              "RelativeToolTip": "Components\\Pages\\Home.razor*",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAAQAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-19T10:18:58.129Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Counter.razor",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\Components\\Pages\\Counter.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Counter.razor",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\Components\\Pages\\Counter.razor",
-              "RelativeToolTip": "Components\\Pages\\Counter.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-19T10:18:49.519Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\Components\\_Imports.razor",
-              "RelativeDocumentMoniker": "Components\\_Imports.razor",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\Components\\_Imports.razor",
-              "RelativeToolTip": "Components\\_Imports.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-19T10:18:43.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\Components\\App.razor",
-              "RelativeDocumentMoniker": "Components\\App.razor",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\Components\\App.razor",
-              "RelativeToolTip": "Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-19T10:18:39.757Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Routes.razor",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\Components\\Routes.razor",
-              "RelativeDocumentMoniker": "Components\\Routes.razor",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\Components\\Routes.razor",
-              "RelativeToolTip": "Components\\Routes.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-19T10:18:33.645Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Weather.razor",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\Components\\Pages\\Weather.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Weather.razor",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\Components\\Pages\\Weather.razor",
-              "RelativeToolTip": "Components\\Pages\\Weather.razor",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAACcAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-19T10:14:55.651Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CityDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\CQRS\\CityDTO.cs",
-              "RelativeDocumentMoniker": "..\\AP.BTP.Application\\CQRS\\CityDTO.cs",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\CQRS\\CityDTO.cs",
-              "RelativeToolTip": "..\\AP.BTP.Application\\CQRS\\CityDTO.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Infrastructure\\UoW\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "..\\AP.BTP.Infrastructure\\UoW\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Infrastructure\\UoW\\UnitOfWork.cs",
+              "RelativeToolTip": "..\\AP.BTP.Infrastructure\\UoW\\UnitOfWork.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T10:04:13.369Z",
+              "WhenOpened": "2025-09-21T19:25:28.9Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AP.BTP.Application",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\AP.BTP.Application.csproj",
-              "RelativeDocumentMoniker": "..\\AP.BTP.Application\\AP.BTP.Application.csproj",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\AP.BTP.Application.csproj*",
-              "RelativeToolTip": "..\\AP.BTP.Application\\AP.BTP.Application.csproj*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-19T09:38:43.979Z",
+              "DocumentIndex": 2,
+              "Title": "CityService.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Services\\CityService.cs",
+              "RelativeDocumentMoniker": "..\\AP.BTP.Application\\Services\\CityService.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Services\\CityService.cs",
+              "RelativeToolTip": "..\\AP.BTP.Application\\Services\\CityService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwBQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:01:02.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ICityService.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Interfaces\\ICityService.cs",
+              "RelativeDocumentMoniker": "..\\AP.BTP.Application\\Interfaces\\ICityService.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Interfaces\\ICityService.cs",
+              "RelativeToolTip": "..\\AP.BTP.Application\\Interfaces\\ICityService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T18:59:33.755Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "City.cs",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Domain\\City.cs",
-              "RelativeDocumentMoniker": "..\\AP.BTP.Domain\\City.cs",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Domain\\City.cs",
-              "RelativeToolTip": "..\\AP.BTP.Domain\\City.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAcwA4AAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Program.cs",
+              "RelativeDocumentMoniker": "..\\AP.BTP.Application\\Program.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Program.cs",
+              "RelativeToolTip": "..\\AP.BTP.Application\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T09:45:45.621Z",
+              "WhenOpened": "2025-09-21T18:58:38.383Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Country.cs",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Domain\\Country.cs",
-              "RelativeDocumentMoniker": "..\\AP.BTP.Domain\\Country.cs",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Domain\\Country.cs",
-              "RelativeToolTip": "..\\AP.BTP.Domain\\Country.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T09:45:00.722Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\DemoProject\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-21T18:50:51.727Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CountryDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\CQRS\\CountryDTO.cs",
-              "RelativeDocumentMoniker": "..\\AP.BTP.Application\\CQRS\\CountryDTO.cs",
-              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\CQRS\\CountryDTO.cs",
-              "RelativeToolTip": "..\\AP.BTP.Application\\CQRS\\CountryDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Registrator.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Infrastructure\\Extensions\\Registrator.cs",
+              "RelativeDocumentMoniker": "..\\AP.BTP.Infrastructure\\Extensions\\Registrator.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Infrastructure\\Extensions\\Registrator.cs*",
+              "RelativeToolTip": "..\\AP.BTP.Infrastructure\\Extensions\\Registrator.cs*",
+              "ViewState": "AgIAAAQAAAAAAAAAAAArwBAAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T10:04:20.31Z",
+              "WhenOpened": "2025-09-21T18:22:24.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Infrastructure\\Program.cs",
+              "RelativeDocumentMoniker": "..\\AP.BTP.Infrastructure\\Program.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Infrastructure\\Program.cs",
+              "RelativeToolTip": "..\\AP.BTP.Infrastructure\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T18:07:45.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICityRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Interfaces\\ICityRepository.cs",
+              "RelativeDocumentMoniker": "..\\AP.BTP.Application\\Interfaces\\ICityRepository.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Interfaces\\ICityRepository.cs",
+              "RelativeToolTip": "..\\AP.BTP.Application\\Interfaces\\ICityRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAArwAsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:12:50.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AP.BTP.Application",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\AP.BTP.Application.csproj",
+              "RelativeDocumentMoniker": "..\\AP.BTP.Application\\AP.BTP.Application.csproj",
+              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\AP.BTP.Application.csproj",
+              "RelativeToolTip": "..\\AP.BTP.Application\\AP.BTP.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-21T18:58:41.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "..\\AP.BTP.Application\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "..\\AP.BTP.Application\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:11:50.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CityRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Infrastructure\\Repositories\\CityRepository.cs",
+              "RelativeDocumentMoniker": "..\\AP.BTP.Infrastructure\\Repositories\\CityRepository.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Infrastructure\\Repositories\\CityRepository.cs",
+              "RelativeToolTip": "..\\AP.BTP.Infrastructure\\Repositories\\CityRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:15:26.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "City.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Domain\\City.cs",
+              "RelativeDocumentMoniker": "..\\AP.BTP.Domain\\City.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Domain\\City.cs",
+              "RelativeToolTip": "..\\AP.BTP.Domain\\City.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T18:30:29.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Registrator.cs",
+              "DocumentMoniker": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Extensions\\Registrator.cs",
+              "RelativeDocumentMoniker": "..\\AP.BTP.Application\\Extensions\\Registrator.cs",
+              "ToolTip": "C:\\Users\\Gebruiker\\Desktop\\school PC\\3e jaar IT\\Software project\\DemoAppliedSoftwareProject\\AP.BTP.Application\\Extensions\\Registrator.cs",
+              "RelativeToolTip": "..\\AP.BTP.Application\\Extensions\\Registrator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T18:19:43.063Z",
               "EditorCaption": ""
             }
           ]

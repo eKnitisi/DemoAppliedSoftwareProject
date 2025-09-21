@@ -1,4 +1,7 @@
+using AP.BTP.Infrastructure.Contexts;
+using AP.BTP.Infrastructure.Extensions;
 using DemoProject.Components;
+using Microsoft.EntityFrameworkCore;
 
 namespace DemoProject
 {
@@ -9,6 +12,8 @@ namespace DemoProject
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddDbContext<BTPContext>(options => options.UseSqlServer("name=ConnectionStrings:DemoProject"));
+            builder.Services.RegisterRepositories();
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
 

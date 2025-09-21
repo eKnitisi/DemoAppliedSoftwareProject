@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AP.BTP.Application\AP.BTP.Application.csproj" />
-    <ProjectReference Include="..\AP.BTP.Domain\AP.BTP.Domain.csproj" />
+    <ProjectReference Include="..\AP.BTP.Infrastructure\AP.BTP.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

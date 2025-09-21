@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AP.BTP.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace AP.BTP.Application.Interfaces
 {
-    internal class ICityRepository
+    public interface ICityRepository
     {
+        public IEnumerable<City> GetAllCities();
     }
 }

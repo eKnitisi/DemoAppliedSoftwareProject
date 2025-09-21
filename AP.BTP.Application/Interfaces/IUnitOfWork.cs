@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace AP.BTP.Application.Interfaces
 {
-    internal class IUnitOfWork
+    public interface IUnitOfWork
     {
+        public ICityRepository CityRepository {get;}
+        Task Commit();
     }
 }
