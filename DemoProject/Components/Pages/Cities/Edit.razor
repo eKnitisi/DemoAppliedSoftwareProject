@@ -1,0 +1,20 @@
+﻿@using AP.BTP.Application.Interfaces
+
+@page "/cities/edit/{Id:int}"
+@inject ICityRepository CityRepository
+@inject NavigationManager Nav
+@* @parameter int Id {get; set;} *@
+
+@* <EditForm Model="model" OnValidSubmit="HandleValidSubmit">
+    <InputText @bind-Value="model.Name" Disabled="true" />
+    <InputNumber @bind-Value="model.Population" />
+    <select @bind="model.CountryId">
+        ...
+    </select>
+    <button type="submit">Save</button>
+</EditForm> *@
+
+@code {
+    //private CityEditModel model = new();
+
+}
