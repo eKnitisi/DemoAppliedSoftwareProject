@@ -1,5 +1,7 @@
 ﻿using AP.BTP.Domain;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +30,8 @@ namespace AP.BTP.Infrastructure.Contexts
             modelBuilder.Entity<Country>().HasData(
                 new Country { Id = 1, Name = "Belgium" },
                 new Country { Id = 2, Name = "Netherlands" },
-                new Country { Id = 3, Name = "Germany" }
+                new Country { Id = 3, Name = "Germany" },
+                new Country { Id = 4, Name = "Turkey"}
             );
 
             // Seed cities
