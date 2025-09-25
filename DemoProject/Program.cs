@@ -1,8 +1,7 @@
-using AP.BTP.Infrastructure.Contexts;
-using AP.BTP.Infrastructure.Extensions;
 using DemoProject.Components;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using DotNetEnv;
 
 namespace DemoProject
 {
@@ -13,8 +12,8 @@ namespace DemoProject
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddDbContext<BTPContext>(options => options.UseSqlServer("name=ConnectionStrings:DemoProject"));
-            builder.Services.RegisterInfrastructure();
+            
+            builder.Services.AddControllers();
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
 
@@ -31,7 +30,21 @@ namespace DemoProject
 
             app.MapRazorComponents<App>()
                 .AddInteractiveServerRenderMode();
+            DotNetEnv.Env.Load(); // leest .env in root van project
+            var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
 
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    Console.WriteLine("Verbinding succesvol!");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(" Verbinding mislukt: " + ex.Message);
+                }
+            }
             app.Run();
         }
     }

@@ -12,13 +12,17 @@ namespace AP.BTP.Infrastructure.UoW
     {
         private BTPContext _BTPContext;
         private ICityRepository _cityRepository;
+        private ICountryRepository _countryRepository;
 
-        public UnitOfWork(BTPContext BTPContext, ICityRepository cityRepository) 
+        public UnitOfWork(BTPContext BTPContext, ICityRepository cityRepository, ICountryRepository countryRepository) 
         {
             this._BTPContext = BTPContext;
             this._cityRepository = cityRepository;
+            this._countryRepository = countryRepository;
         }
         public ICityRepository CityRepository => _cityRepository;
+
+        public ICountryRepository CountryRepository => _countryRepository;
 
         public async Task Commit()
         {
