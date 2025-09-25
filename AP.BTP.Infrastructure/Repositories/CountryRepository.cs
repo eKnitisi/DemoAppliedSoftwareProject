@@ -1,6 +1,7 @@
 ﻿using AP.BTP.Application.Interfaces;
 using AP.BTP.Domain;
 using AP.BTP.Infrastructure.Contexts;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,5 +21,8 @@ namespace AP.BTP.Infrastructure.Repositories
         {
             return _BTPContext.Countries;
         }
+        public IQueryable<Country> GetAllCountriesQueryable() => _BTPContext.Countries.AsNoTracking();
+        public Task<Country?> GetByIdAsync(int id) =>
+            _BTPContext.Countries.FirstOrDefaultAsync(c => c.Id == id);
     }
 }
