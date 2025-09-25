@@ -6,35 +6,10 @@
 
 <p>A list of cities, sortable by population.</p>
 
-@if (CityList == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Name of the country</th>
-                <th>Population</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var city in CityList)
-            {
-                <tr>
-                    <td>@city.Name</td>
-                    <td>@city.Country.Name</td>
-                    <td>@city.Population</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+
+
 
 @code {
-    private List<City> CityList;
 
     protected override async Task OnInitializedAsync()
     {
