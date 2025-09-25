@@ -20,16 +20,19 @@ namespace AP.BTP.Infrastructure.Extensions
             services.RegisterRepositories();
             return services;
         }
+
         public static IServiceCollection RegisterDbContext(this IServiceCollection services)
         {
             services.AddDbContext<BTPContext>(options =>
-                        options.UseSqlServer("name=ConnectionStrings:DemoProject"));
-
+                        options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
             return services;
+
         }
+
         public static IServiceCollection RegisterRepositories(this IServiceCollection services)
         {
             services.AddScoped<ICityRepository, CityRepository>();
+            services.AddScoped<ICountryRepository, CountryRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             return services;
         }
