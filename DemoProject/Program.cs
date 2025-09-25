@@ -4,6 +4,7 @@ using AP.BTP.Infrastructure.Extensions;
 using DemoProject.Components;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using DotNetEnv;
 
 namespace DemoProject
 {
@@ -34,7 +35,10 @@ namespace DemoProject
 
             app.MapRazorComponents<App>()
                 .AddInteractiveServerRenderMode();
-            using (SqlConnection conn = new SqlConnection("Server=LAPTOP-PVNO4J0S;Database=DemoProject;Trusted_Connection=True;TrustServerCertificate=True;"))
+            DotNetEnv.Env.Load(); // leest .env in root van project
+            var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
