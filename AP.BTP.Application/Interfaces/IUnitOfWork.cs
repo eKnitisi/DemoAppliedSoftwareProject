@@ -9,6 +9,7 @@ namespace AP.BTP.Application.Interfaces
     public interface IUnitOfWork
     {
         public ICityRepository CityRepository {get;}
+        public ICountryRepository CountryRepository { get; }
         Task Commit();
     }
 }
