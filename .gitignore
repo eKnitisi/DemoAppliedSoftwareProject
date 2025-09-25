@@ -39,7 +39,6 @@ artifacts/
 wwwroot/dist/
 wwwroot/*.gz
 wwwroot/*.br
-appsettings.json
 
 ## Visual Studio instellingen
 *.DotSettings.user
