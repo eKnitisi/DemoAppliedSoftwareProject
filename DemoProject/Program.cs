@@ -30,21 +30,7 @@ namespace DemoProject
 
             app.MapRazorComponents<App>()
                 .AddInteractiveServerRenderMode();
-            DotNetEnv.Env.Load(); // leest .env in root van project
-            var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    Console.WriteLine("Verbinding succesvol!");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(" Verbinding mislukt: " + ex.Message);
-                }
-            }
             app.Run();
         }
     }
