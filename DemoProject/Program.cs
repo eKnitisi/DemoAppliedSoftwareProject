@@ -2,6 +2,7 @@ using AP.BTP.Application.Extensions;
 using AP.BTP.Infrastructure.Contexts;
 using AP.BTP.Infrastructure.Extensions;
 using DemoProject.Components;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 namespace DemoProject
@@ -33,7 +34,18 @@ namespace DemoProject
 
             app.MapRazorComponents<App>()
                 .AddInteractiveServerRenderMode();
-
+            using (SqlConnection conn = new SqlConnection("Server=LAPTOP-PVNO4J0S;Database=DemoProject;Trusted_Connection=True;TrustServerCertificate=True;"))
+            {
+                try
+                {
+                    conn.Open();
+                    Console.WriteLine("Verbinding succesvol!");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(" Verbinding mislukt: " + ex.Message);
+                }
+            }
             app.Run();
         }
     }

@@ -32,7 +32,7 @@ namespace AP.BTP.Infrastructure.Extensions
         public static IServiceCollection RegisterRepositories(this IServiceCollection services)
         {
             services.AddScoped<ICityRepository, CityRepository>();
-            services.AddScoped<ICountryRepository, ICountryRepository>();
+            services.AddScoped<ICountryRepository, CountryRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             return services;
         }
