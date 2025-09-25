@@ -14,10 +14,8 @@ namespace DemoProject
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            
+            builder.Services.AddDbContext<BTPContext>(options => options.UseSqlServer("name=ConnectionStrings:DemoProject"));
             builder.Services.RegisterInfrastructure();
-            builder.Services.RegisterApplication();
-            builder.Services.AddControllers();
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
 
