@@ -59,7 +59,7 @@ publish/
 
 ## User secrets (niet delen in Git!)
 secrets.json
-
+.env
 ## Logs
 *.log
 Logs/
