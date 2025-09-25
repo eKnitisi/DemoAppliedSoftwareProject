@@ -1,6 +1,3 @@
-using AP.BTP.Application.Extensions;
-using AP.BTP.Infrastructure.Contexts;
-using AP.BTP.Infrastructure.Extensions;
 using DemoProject.Components;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -16,8 +13,6 @@ namespace DemoProject
 
             // Add services to the container.
             
-            builder.Services.RegisterInfrastructure();
-            builder.Services.RegisterApplication();
             builder.Services.AddControllers();
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();

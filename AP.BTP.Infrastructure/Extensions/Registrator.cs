@@ -24,7 +24,7 @@ namespace AP.BTP.Infrastructure.Extensions
         public static IServiceCollection RegisterDbContext(this IServiceCollection services)
         {
             services.AddDbContext<BTPContext>(options =>
-                        options.UseSqlServer("name=ConnectionStrings:DemoProject"));
+                        options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
             return services;
 
         }

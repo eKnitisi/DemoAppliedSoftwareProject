@@ -1,4 +1,8 @@
 
+using AP.BTP.Application.Extensions;
+using AP.BTP.Infrastructure.Extensions;
+using AP.BTP.WebAPI.Extensions;
+
 namespace AP.BTP.WebAPI
 {
     public class Program
@@ -8,7 +12,8 @@ namespace AP.BTP.WebAPI
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            builder.Services.RegisterApplication();
+            builder.Services.RegisterInfrastructure();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -22,7 +27,8 @@ namespace AP.BTP.WebAPI
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            app.UseErrorHandlingMiddleware();
+            app.UseHttpsRedirection();
             app.UseAuthorization();
 
 
