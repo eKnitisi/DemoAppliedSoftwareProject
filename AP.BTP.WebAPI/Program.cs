@@ -2,6 +2,8 @@
 using AP.BTP.Application.Extensions;
 using AP.BTP.Infrastructure.Extensions;
 using AP.BTP.WebAPI.Extensions;
+using DotNetEnv;
+
 
 namespace AP.BTP.WebAPI
 {
@@ -9,11 +11,14 @@ namespace AP.BTP.WebAPI
     {
         public static void Main(string[] args)
         {
+
+            // Load .env file (defaults to project root .env)
+            Env.Load();
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
             builder.Services.RegisterApplication();
-            builder.Services.RegisterInfrastructure();
+            builder.Services.RegisterInfrastructure(builder.Configuration);
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

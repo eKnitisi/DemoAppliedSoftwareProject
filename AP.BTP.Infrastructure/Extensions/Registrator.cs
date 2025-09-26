@@ -9,24 +9,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace AP.BTP.Infrastructure.Extensions
 {
     public static class Registrator
     {
-        public static IServiceCollection RegisterInfrastructure(this IServiceCollection services)
+        public static IServiceCollection RegisterInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            services.RegisterDbContext();
+            services.RegisterDbContext(configuration);
             services.RegisterRepositories();
             return services;
         }
 
-        public static IServiceCollection RegisterDbContext(this IServiceCollection services)
+        public static IServiceCollection RegisterDbContext(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<BTPContext>(options =>
-                        options.UseSqlServer("Server=LAPTOP-PVNO4J0S;Database=DemoProject;Trusted_Connection=True;TrustServerCertificate=True;"));
-            return services;
+            // Read from environment variable or appsettings.json
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
 
+            services.AddDbContext<BTPContext>(options =>
+                options.UseSqlServer(connectionString));
+
+            return services;
         }
 
         public static IServiceCollection RegisterRepositories(this IServiceCollection services)
