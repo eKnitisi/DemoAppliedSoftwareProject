@@ -14,6 +14,7 @@ namespace AP.BTP.Application
         public Mappings()
         {
             CreateMap<City, CityDTO>();
+            CreateMap<Country, CountryDTO>();
 
 
         }
