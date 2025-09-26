@@ -10,7 +10,7 @@ namespace AP.BTP.Application.CQRS
     {
         public string Name { get; set; }
         public long Population { get; set; }
-        public string CountryName { get; set; } // only country name
+        public string CountryName { get; set; } 
     }
 
 }
