@@ -5,7 +5,7 @@ using MediatR;
 
 namespace AP.BTP.Application.CQRS
 {
-    internal class GetCityByIdQuery : IRequest<CityDTO?>
+    public class GetCityByIdQuery : IRequest<CityDTO?>
     {
         public int Id { get; set; }
 
