@@ -17,6 +17,12 @@ namespace DemoProject
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
 
+            builder.Services.AddScoped<HttpClient>(s =>
+            {
+                return new HttpClient { BaseAddress = new Uri("http://localhost:5087/") };
+            });
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

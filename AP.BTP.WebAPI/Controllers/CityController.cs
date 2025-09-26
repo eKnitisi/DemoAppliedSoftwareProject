@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AP.BTP.WebAPI.Controllers
 {
     [ApiController]
-    [Route("api/v1")]
+    [Route("api/v1/[controller]")]
     public class CityController : ControllerBase
     {
         private readonly IMediator mediator;
