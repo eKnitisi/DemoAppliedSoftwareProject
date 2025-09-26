@@ -1,0 +1,35 @@
+﻿@page "/citylist"
+@rendermode InteractiveServer
+@inject HttpClient Http
+
+<PageTitle>Citylist</PageTitle>
+
+<h1>List</h1>
+
+@if (cities == null)
+{
+    <p>Laden...</p>
+}
+else
+{
+    <ul>
+        @foreach (var city in cities)
+        {
+            <li>@city.Name (@city.Population inwoners)</li>
+        }
+    </ul>
+}
+@code {
+    private List<CityDtoObj>? cities;
+
+    public class CityDtoObj
+    {
+        public string Name { get; set; }
+        public int Population { get; set; }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        cities = await Http.GetFromJsonAsync<List<CityDtoObj>>("api/v1/city/allCities");
+    }
+}

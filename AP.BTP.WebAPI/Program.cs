@@ -16,6 +16,7 @@ namespace AP.BTP.WebAPI
             Env.Load();
             var builder = WebApplication.CreateBuilder(args);
 
+
             // Add services to the container.
             builder.Services.RegisterApplication();
             builder.Services.RegisterInfrastructure(builder.Configuration);
@@ -25,6 +26,10 @@ namespace AP.BTP.WebAPI
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
+
+            Env.Load();
+            builder.Configuration["ConnectionStrings:DefaultConnection"] = Environment.GetEnvironmentVariable("CONNECTION_STRING");
+
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
