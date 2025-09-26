@@ -9,16 +9,24 @@ using System.Threading.Tasks;
 
 namespace AP.BTP.Infrastructure.Repositories
 {
-    public class CountryRepository: ICountryRepository
+    public class CountryRepository: GenericRepository<Country>,ICountryRepository
     {
         private BTPContext _BTPContext;
-        public CountryRepository(BTPContext BTPContext)
+        public CountryRepository(BTPContext BTPContext):base(BTPContext)
         {
             this._BTPContext = BTPContext;
         }
         public IEnumerable<Country> GetAllCountries()
         {
             return _BTPContext.Countries;
+        }
+
+        public async Task<Country> FindByName(string name)
+        {
+            return await Task.FromResult(
+                _BTPContext.Countries
+                           .FirstOrDefault(c => c.Name.ToLower() == name.ToLower())
+            );
         }
     }
 }

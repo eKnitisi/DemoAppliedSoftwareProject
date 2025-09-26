@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace AP.BTP.Infrastructure.Repositories
 {
-    public class CityRepository : ICityRepository
+    public class CityRepository :  GenericRepository<City>,ICityRepository
     {
         private BTPContext _BTPContext;
-        public CityRepository(BTPContext BTPContext)
+        public CityRepository(BTPContext BTPContext):base(BTPContext)
         {
             this._BTPContext = BTPContext;
         }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AP.BTP.Application.Interfaces
 {
-    public interface ICityRepository
+    public interface ICityRepository: IGenericRepository<City>
     {
         public IEnumerable<City> GetAllCities();
     }
