@@ -4,8 +4,7 @@
 
 <PageTitle>Citylist</PageTitle>
 
-<h1>List</h1>
-
+<h1>Stedenlijst</h1>
 
 @if (cities == null)
 {
@@ -13,34 +12,60 @@
 }
 else
 {
-    <select @bind="sortDescending">
-    <option value="false">Laag naar hoog</option>
-    <option value="true">Hoog naar laag</option>
+    <label>Sorteer op aantal inwoners:</label>
+    <select @bind="sortValue" @bind:after="OnSortChanged">
+        <option value="0">Laag naar hoog</option>
+        <option value="1">Hoog naar laag</option>
     </select>
-    <ul>
-        @foreach (var city in cities)
-        {
-            <li>@city.Name (@city.Population inwoners)</li>
-        }
-    </ul>
+
+    <table class="table table-striped mt-3">
+        <thead>
+            <tr>
+                <th>Stad</th>
+                <th>Land</th>
+                <th>Aantal inwoners</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var city in cities)
+            {
+                <tr>
+                    <td>@city.Name</td>
+                    <td>@city.CountryName</td>
+                    <td>@city.Population</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
+
 @code {
     private List<CityDtoObj>? cities;
-    private bool sortDescending;
 
+    private int sortValue = 0;
+
+    private bool sortDescending => sortValue == 1;
 
     public class CityDtoObj
     {
         public string Name { get; set; }
         public int Population { get; set; }
+        public string CountryName { get; set; }
     }
+
     protected override async Task OnInitializedAsync()
     {
         await LoadCities();
     }
 
-    private async Task LoadCities(ChangeEventArgs? e = null)
+    private async Task LoadCities()
     {
-        cities = await Http.GetFromJsonAsync<List<CityDtoObj>>($"api/v1/city/allCities?sortDesc={sortDescending}");
+        cities = await Http.GetFromJsonAsync<List<CityDtoObj>>(
+            $"api/v1/city/allCities?sortDesc={sortDescending}");
+    }
+
+    private async Task OnSortChanged()
+    {
+        await LoadCities();
     }
 }
