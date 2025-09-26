@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AP.BTP.WebAPI.Controllers
 {
+    [ApiController]
     [Route("api/v1")]
     public class CityController : ControllerBase
     {
@@ -13,7 +14,7 @@ namespace AP.BTP.WebAPI.Controllers
         {
             this.mediator = mediator;
         }
-        [Route("allCities")]
+        [HttpGet("allCities")]
         public async Task<IActionResult> GetAllCities()
         {
             return Ok(await mediator.Send(new GetAllCitiesQuery()));

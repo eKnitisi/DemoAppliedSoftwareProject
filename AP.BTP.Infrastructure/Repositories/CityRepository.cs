@@ -7,21 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using AP.BTP.Application.CQRS;
 
 
 namespace AP.BTP.Infrastructure.Repositories
 {
-    public abstract class CityRepository : ICityRepository
+    public class CityRepository : ICityRepository
     {
-        private BTPContext _BTPContext;
+        private readonly DbContext _BTPContext;
+        private readonly DbSet<City> _dbSet;
         public CityRepository(BTPContext BTPContext)
         {
             this._BTPContext = BTPContext;
-        }
-        public IEnumerable<City> GetAllCities()
-        {
-            return _BTPContext.Cities;
-        }
+            _dbSet = _BTPContext.Set<City>();
 
+        }
+        public async Task<IEnumerable<City>> GetAllCities()
+        {
+            return await _dbSet.ToListAsync();
+        }
     }
 }
