@@ -1,4 +1,4 @@
-﻿using AP.BTP.Application.Interfaces;
+using AP.BTP.Application.Interfaces;
 using AP.BTP.Domain;
 using AutoMapper;
 using MediatR;

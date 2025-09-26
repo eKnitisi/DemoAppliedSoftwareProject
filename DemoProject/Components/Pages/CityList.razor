@@ -1,19 +1,35 @@
-﻿@page "/counter"
+﻿@page "/citylist"
 @rendermode InteractiveServer
+@inject HttpClient Http
 
-<PageTitle>Counter</PageTitle>
+<PageTitle>Citylist</PageTitle>
 
-<h1>Counter</h1>
+<h1>List</h1>
 
-<p role="status">Current count: @currentCount</p>
-
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
-
+@if (cities == null)
+{
+    <p>Laden...</p>
+}
+else
+{
+    <ul>
+        @foreach (var city in cities)
+        {
+            <li>@city.Name (@city.Population inwoners)</li>
+        }
+    </ul>
+}
 @code {
-    private int currentCount = 0;
+    private List<CityDtoObj>? cities;
 
-    private void IncrementCount()
+    public class CityDtoObj
     {
-        currentCount++;
+        public string Name { get; set; }
+        public int Population { get; set; }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        cities = await Http.GetFromJsonAsync<List<CityDtoObj>>("api/v1/city/allCities");
     }
 }

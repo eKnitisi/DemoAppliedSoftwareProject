@@ -6,25 +6,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using AP.BTP.Application.CQRS;
+
 
 namespace AP.BTP.Infrastructure.Repositories
 {
     public class CityRepository :  GenericRepository<City>,ICityRepository
     {
-        private BTPContext _BTPContext;
-        public CityRepository(BTPContext BTPContext):base(BTPContext)
+        private readonly DbContext _BTPContext;
+        private readonly DbSet<City> _dbSet;
+        public CityRepository(BTPContext BTPContext): base(BTPContext)
         {
             this._BTPContext = BTPContext;
-        }
-        public IEnumerable<City> GetAllCities()
-        {
-            return _BTPContext.Cities;
-        }
+            _dbSet = _BTPContext.Set<City>();
 
-        Task<IEnumerable<City>> ICityRepository.GetAllCities()
-        {
-            throw new NotImplementedException();
         }
-        
+        public async Task<IEnumerable<City>> GetAllCities()
+        {
+            return await _dbSet.ToListAsync();
+        }        
     }
 }

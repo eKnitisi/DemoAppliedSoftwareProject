@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AP.BTP.WebAPI.Controllers
 {
     [ApiController]
-    [Route("api/v1")]
+    [Route("api/v1/[controller]")]
     public class CityController : ControllerBase
     {
         private readonly IMediator mediator;
@@ -21,8 +21,7 @@ namespace AP.BTP.WebAPI.Controllers
         {
             return Created("", await mediator.Send(new AddCommand() { City = city }));
         }
-        [HttpGet]
-        [Route("allCities")]
+        [HttpGet("allCities")]
         public async Task<IActionResult> GetAllCities()
         {
             return Ok(await mediator.Send(new GetAllCitiesQuery()));
