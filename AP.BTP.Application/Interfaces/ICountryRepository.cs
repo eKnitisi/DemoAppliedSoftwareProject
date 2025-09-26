@@ -10,7 +10,5 @@ namespace AP.BTP.Application.Interfaces
     public interface ICountryRepository
     {
         public IEnumerable<Country> GetAllCountries();
-        IQueryable<Country> GetAllCountriesQueryable();
-        Task<Country?> GetByIdAsync(int id);
     }
 }

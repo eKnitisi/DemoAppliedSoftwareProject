@@ -13,22 +13,26 @@ namespace AP.BTP.Infrastructure.Repositories
     public class CityRepository : ICityRepository
     {
         private BTPContext _BTPContext;
+        private readonly DbSet<City> _dbSet;
         public CityRepository(BTPContext BTPContext)
         {
             this._BTPContext = BTPContext;
+            _dbSet = _BTPContext.Set<City>();
         }
-        public IEnumerable<City> GetAllCities()
+        public async Task<IEnumerable<City>> GetAllCities()
         {
-            return _BTPContext.Cities;
+            return await _dbSet.Include(c => c.Country).ToListAsync();
         }
-        public IQueryable<City> GetAllCitiesQueryable() => _BTPContext.Cities.Include(c => c.Country).AsNoTracking();
-        public Task<City?> GetByIdAsync(int id) =>
-            _BTPContext.Cities.Include(c => c.Country).FirstOrDefaultAsync(c => c.Id == id);
-        public Task<City?> GetByNameAsync(string name) =>
-            _BTPContext.Cities.FirstOrDefaultAsync(c => c.Name == name);
-        public void Update(City city)
+
+        public async Task<City?> GetCityById(int id)
         {
-            _BTPContext.Cities.Update(city);
+            return await _dbSet.Include(c => c.Country)
+                              .FirstOrDefaultAsync(c => c.Id == id);
+        }
+
+        public async Task UpdateCity(City city)
+        {
+            _BTPContext.Entry(city).State = EntityState.Modified;
         }
     }
 }
