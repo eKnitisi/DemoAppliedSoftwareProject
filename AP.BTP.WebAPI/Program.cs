@@ -2,6 +2,7 @@
 using AP.BTP.Application.Extensions;
 using AP.BTP.Infrastructure.Extensions;
 using AP.BTP.WebAPI.Extensions;
+using DotNetEnv;
 
 namespace AP.BTP.WebAPI
 {
@@ -10,6 +11,7 @@ namespace AP.BTP.WebAPI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
 
             // Add services to the container.
             builder.Services.RegisterApplication();
@@ -20,6 +22,10 @@ namespace AP.BTP.WebAPI
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
+
+            Env.Load();
+            builder.Configuration["ConnectionStrings:DefaultConnection"] = Environment.GetEnvironmentVariable("CONNECTION_STRING");
+
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

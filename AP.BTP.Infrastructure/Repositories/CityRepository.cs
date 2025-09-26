@@ -6,10 +6,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace AP.BTP.Infrastructure.Repositories
 {
-    public class CityRepository : ICityRepository
+    public abstract class CityRepository : ICityRepository
     {
         private BTPContext _BTPContext;
         public CityRepository(BTPContext BTPContext)
@@ -20,5 +22,6 @@ namespace AP.BTP.Infrastructure.Repositories
         {
             return _BTPContext.Cities;
         }
+
     }
 }

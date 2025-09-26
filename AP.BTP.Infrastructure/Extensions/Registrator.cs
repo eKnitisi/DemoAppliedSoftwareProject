@@ -4,11 +4,8 @@ using AP.BTP.Infrastructure.Repositories;
 using AP.BTP.Infrastructure.UoW;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DotNetEnv;
+
 
 namespace AP.BTP.Infrastructure.Extensions
 {
@@ -23,8 +20,9 @@ namespace AP.BTP.Infrastructure.Extensions
 
         public static IServiceCollection RegisterDbContext(this IServiceCollection services)
         {
+            Env.Load();
             services.AddDbContext<BTPContext>(options =>
-                        options.UseSqlServer("Server=LAPTOP-PVNO4J0S;Database=DemoProject;Trusted_Connection=True;TrustServerCertificate=True;"));
+                        options.UseSqlServer(Environment.GetEnvironmentVariable("CONNECTION_STRING")));
             return services;
 
         }
