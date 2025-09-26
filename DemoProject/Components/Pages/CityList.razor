@@ -6,12 +6,17 @@
 
 <h1>List</h1>
 
+
 @if (cities == null)
 {
     <p>Laden...</p>
 }
 else
 {
+    <select @bind="sortDescending">
+    <option value="false">Laag naar hoog</option>
+    <option value="true">Hoog naar laag</option>
+    </select>
     <ul>
         @foreach (var city in cities)
         {
@@ -21,15 +26,21 @@ else
 }
 @code {
     private List<CityDtoObj>? cities;
+    private bool sortDescending;
+
 
     public class CityDtoObj
     {
         public string Name { get; set; }
         public int Population { get; set; }
     }
-
     protected override async Task OnInitializedAsync()
     {
-        cities = await Http.GetFromJsonAsync<List<CityDtoObj>>("api/v1/city/allCities");
+        await LoadCities();
+    }
+
+    private async Task LoadCities(ChangeEventArgs? e = null)
+    {
+        cities = await Http.GetFromJsonAsync<List<CityDtoObj>>($"api/v1/city/allCities?sortDesc={sortDescending}");
     }
 }

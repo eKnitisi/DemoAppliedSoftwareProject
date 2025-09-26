@@ -15,9 +15,11 @@ namespace AP.BTP.WebAPI.Controllers
             this.mediator = mediator;
         }
         [HttpGet("allCities")]
-        public async Task<IActionResult> GetAllCities()
+        public async Task<IActionResult> GetAllCities([FromQuery] bool sortDesc = false)
         {
-            return Ok(await mediator.Send(new GetAllCitiesQuery()));
+            var query = new GetAllCitiesQuery() { SortDescending = sortDesc };
+            var cities = await mediator.Send(query);
+            return Ok(cities);
 
         }
     }

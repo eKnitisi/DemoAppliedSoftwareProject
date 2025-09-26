@@ -13,7 +13,7 @@ namespace AP.BTP.Application
     {
         public Mappings()
         {
-            CreateMap<City, CityDTO>();
+            CreateMap<City, CityDTO>().ForMember(dest => dest.CountryName, opt => opt.MapFrom(src => src.Country.Name));
 
 
         }
