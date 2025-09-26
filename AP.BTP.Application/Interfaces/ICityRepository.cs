@@ -9,6 +9,6 @@ namespace AP.BTP.Application.Interfaces
 {
     public interface ICityRepository
     {
-        public IEnumerable<City> GetAllCities();
+        public Task<IEnumerable<City>> GetAllCities();
     }
 }
