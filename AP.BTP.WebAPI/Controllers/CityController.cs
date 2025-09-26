@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AP.BTP.WebAPI.Controllers
 {
+    [ApiController]
     [Route("api/v1")]
     public class CityController : ControllerBase
     {
@@ -15,10 +16,12 @@ namespace AP.BTP.WebAPI.Controllers
         }
 
         [HttpPost]
+        [Route("addCities")]
         public async Task<IActionResult> CreateCity([FromBody] CityCreateDTO city)
         {
             return Created("", await mediator.Send(new AddCommand() { City = city }));
         }
+        [HttpGet]
         [Route("allCities")]
         public async Task<IActionResult> GetAllCities()
         {

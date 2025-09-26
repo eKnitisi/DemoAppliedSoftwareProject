@@ -20,5 +20,10 @@ namespace AP.BTP.Infrastructure.Repositories
         {
             return _BTPContext.Cities;
         }
+
+        Task<IEnumerable<City>> ICityRepository.GetAllCities()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
