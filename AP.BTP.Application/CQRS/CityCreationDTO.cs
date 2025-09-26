@@ -9,7 +9,7 @@ namespace AP.BTP.Application.CQRS
     public class CityCreateDTO
     {
         public string Name { get; set; }
-        public int Population { get; set; }
+        public long Population { get; set; }
         public string CountryName { get; set; } // only country name
     }
 

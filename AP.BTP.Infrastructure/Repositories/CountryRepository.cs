@@ -21,12 +21,6 @@ namespace AP.BTP.Infrastructure.Repositories
             return _BTPContext.Countries;
         }
 
-        public async Task<Country> FindByName(string name)
-        {
-            return await Task.FromResult(
-                _BTPContext.Countries
-                           .FirstOrDefault(c => c.Name.ToLower() == name.ToLower())
-            );
-        }
+        
     }
 }

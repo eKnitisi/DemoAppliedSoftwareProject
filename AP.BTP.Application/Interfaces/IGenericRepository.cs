@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,6 +16,7 @@ namespace AP.BTP.Application.Interfaces
         Task<T> Create(T newCity);
 
         T Update(T modifiedCity);
-        void Delete(T city);
+        void Delete(T city); 
+        Task<T?> FindAsync(Expression<Func<T, bool>> predicate);
     }
 }

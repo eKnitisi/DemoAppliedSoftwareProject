@@ -12,7 +12,6 @@ namespace AP.BTP.WebAPI
         public static void Main(string[] args)
         {
 
-            // Load .env file (defaults to project root .env)
             Env.Load();
             var builder = WebApplication.CreateBuilder(args);
 

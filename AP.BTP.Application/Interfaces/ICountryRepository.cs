@@ -10,6 +10,6 @@ namespace AP.BTP.Application.Interfaces
     public interface ICountryRepository: IGenericRepository<Country>
     {
         public IEnumerable<Country> GetAllCountries();
-        public Task<Country> FindByName(string name);
+
     }
 }

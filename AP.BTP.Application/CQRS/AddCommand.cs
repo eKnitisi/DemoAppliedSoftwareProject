@@ -1,6 +1,7 @@
 ﻿using AP.BTP.Application.Interfaces;
 using AP.BTP.Domain;
 using AutoMapper;
+using FluentValidation;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,37 @@ namespace AP.BTP.Application.CQRS
         public CityCreateDTO City { get; set; }
     }
 
+    public class AddCommandValidator : AbstractValidator<AddCommand>
+    {
+        private IUnitOfWork uow;
+
+        public AddCommandValidator(IUnitOfWork uow)
+        {
+            this.uow = uow;
+
+            RuleFor(s => s.City.Name)
+    .NotNull()
+    .WithMessage("City cannot be empty")
+    .MustAsync(async (name, cancellation) =>
+    {
+        var city = await uow.CityRepository
+                            .FindAsync(c => c.Name.ToLower() == name.ToLower());
+        return city == null; 
+    })
+    .WithMessage("The city is already added");
+
+
+            RuleFor(s => s.City.Population)
+                .LessThan(10000000000)
+                .WithMessage("Too large of an population");
+
+            RuleFor(s => s.City.CountryName)
+                .NotNull()
+                .WithMessage("Country cannot be empty");
+        }
+    }
+
+
     public class AddCommandHandler : IRequestHandler<AddCommand, CityDTO>
     {
         private readonly IUnitOfWork uow;
@@ -28,26 +60,23 @@ namespace AP.BTP.Application.CQRS
 
         public async Task<CityDTO> Handle(AddCommand request, CancellationToken cancellationToken)
         {
-            // Check if country already exists
             var country = await uow.CountryRepository
-                .FindByName(request.City.CountryName); 
+    .FindAsync(c => c.Name.ToLower() == request.City.CountryName.ToLower());
+
 
             if (country == null)
             {
-                // Create new country
                 country = new Country { Name = request.City.CountryName };
                 await uow.CountryRepository.Create(country);
-                await uow.Commit(); // get new country ID
+                await uow.Commit(); 
             }
 
-            // Create city and assign CountryId
             var cityEntity = mapper.Map<City>(request.City);
             cityEntity.CountryId = country.Id;
 
             await uow.CityRepository.Create(cityEntity);
             await uow.Commit();
 
-            // Return the saved city
             return mapper.Map<CityDTO>(cityEntity);
         }
     }
