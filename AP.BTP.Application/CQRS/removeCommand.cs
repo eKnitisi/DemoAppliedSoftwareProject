@@ -23,11 +23,13 @@ namespace AP.BTP.Application.CQRS
     {
         private readonly IUnitOfWork uow;
         private readonly IMapper mapper;
+        private readonly IEmailService emailService;
 
-        public RemoveCommandHandler(IUnitOfWork uow, IMapper mapper)
+        public RemoveCommandHandler(IUnitOfWork uow, IMapper mapper, IEmailService emailService)
         {
             this.uow = uow;
             this.mapper = mapper;
+            this.emailService = emailService;
         }
 
         public async Task<CityDTO> Handle(RemoveCommand request, CancellationToken cancellationToken)
@@ -46,6 +48,12 @@ namespace AP.BTP.Application.CQRS
             uow.CityRepository.Delete(city);
             await uow.Commit();
 
+            // Simuleer het versturen van een e-mail naar de admin
+            var adminEmail = "admin@ap.be";
+            var subject = "City Deleted Notification";
+            var body = $"The city '{city.Name}' has been removed from the database.";
+            await emailService.SendEmailAsync(adminEmail, subject, body);
+            
             return mapper.Map<CityDTO>(city);
         }
     }
