@@ -1,10 +1,17 @@
 ﻿@page "/citylist"
+@using System.Text.Json
 @rendermode InteractiveServer
 @inject HttpClient Http
+@inject NavigationManager Navigation
 
 <PageTitle>Citylist</PageTitle>
 
 <h1>List</h1>
+
+@if (!string.IsNullOrEmpty(message))
+{
+    <div class="mt-3 alert @messageClass">@message</div>
+}
 
 @if (cities == null)
 {
@@ -15,21 +22,89 @@ else
     <ul>
         @foreach (var city in cities)
         {
-            <li>@city.Name (@city.Population inwoners)</li>
+            <li class="mb-2">
+                @city.Name (@city.Population inwoners)
+                <button class="btn btn-sm btn-danger ms-2" @onclick="() => DeleteCity(city)">Verwijderen</button>
+            </li>
         }
     </ul>
 }
+
+<button class="btn btn-primary mt-3" @onclick="GoToAddCity">Add City</button>
+
 @code {
     private List<CityDtoObj>? cities;
+    private string message;
+    private string messageClass = "alert-info";
 
     public class CityDtoObj
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public int Population { get; set; }
+    }
+
+    public class ErrorResponseInfo
+    {
+        public int StatusCode { get; set; }
+        public string Message { get; set; } = "";
+        public string? ErrorCode { get; set; }
     }
 
     protected override async Task OnInitializedAsync()
     {
         cities = await Http.GetFromJsonAsync<List<CityDtoObj>>("api/v1/city/allCities");
+    }
+
+    private async Task DeleteCity(CityDtoObj city)
+    {
+        try
+        {
+            var response = await Http.DeleteAsync($"api/v1/city/{city.Id}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                cities.Remove(city);
+                message = $"City '{city.Name}' deleted successfully!";
+                messageClass = "alert-success";
+                StateHasChanged();
+            }
+            else
+            {
+                // Deserialize JSON error response
+                var errorJson = await response.Content.ReadAsStringAsync();
+                var error = JsonSerializer.Deserialize<ErrorResponseInfo>(errorJson);
+
+                if (error != null && error.ErrorCode != null)
+                {
+                    switch (error.ErrorCode)
+                    {
+                        case "CANNOT_DELETE_LAST_CITY":
+                            message = $"Cannot delete '{city.Name}': this is the last city.";
+                            messageClass = "alert-warning";
+                            break;
+                        default:
+                            message = $"Error deleting city '{city.Name}': {error.Message}";
+                            messageClass = "alert-danger";
+                            break;
+                    }
+                }
+                else
+                {
+                    message = $"Error deleting city '{city.Name}': {errorJson}";
+                    messageClass = "alert-danger";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            message = $"Exception deleting city '{city.Name}': {ex.Message}";
+            messageClass = "alert-danger";
+        }
+    }
+
+    private void GoToAddCity()
+    {
+        Navigation.NavigateTo("/addcity");
     }
 }

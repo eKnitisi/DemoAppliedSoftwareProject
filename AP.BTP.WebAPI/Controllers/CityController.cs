@@ -21,6 +21,18 @@ namespace AP.BTP.WebAPI.Controllers
         {
             return Created("", await mediator.Send(new AddCommand() { City = city }));
         }
+        
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> RemoveCity(int id)
+        {
+            var removedCity = await mediator.Send(new RemoveCommand() { Id = id });
+
+            if (removedCity == null)
+                return NotFound(new { Message = $"City with ID {id} not found." });
+
+            return Ok(removedCity);
+        }
+        
         [HttpGet("allCities")]
         public async Task<IActionResult> GetAllCities()
         {
