@@ -11,5 +11,6 @@ namespace AP.BTP.Application.Interfaces
     public interface ICityRepository: IGenericRepository<City>
     {
         public Task<IEnumerable<City>> GetAllCities();
+        public Task<City> GetByIdAsync(int id);
     }
 }
