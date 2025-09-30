@@ -24,6 +24,7 @@ else
         {
             <li class="mb-2">
                 @city.Name (@city.Population inwoners)
+                <button class="btn btn-sm btn-primary ms-2" @onclick="() => EditCity(city.Id)">Bewerken</button>
                 <button class="btn btn-sm btn-danger ms-2" @onclick="() => DeleteCity(city)">Verwijderen</button>
             </li>
         }
@@ -42,6 +43,7 @@ else
         public int Id { get; set; }
         public string Name { get; set; }
         public int Population { get; set; }
+        public int CountryId { get; set; }
     }
 
     public class ErrorResponseInfo
@@ -54,6 +56,11 @@ else
     protected override async Task OnInitializedAsync()
     {
         cities = await Http.GetFromJsonAsync<List<CityDtoObj>>("api/v1/city/allCities");
+    }
+
+    private void EditCity(int cityId)
+    {
+        Navigation.NavigateTo($"/cityedit/{cityId}");
     }
 
     private async Task DeleteCity(CityDtoObj city)

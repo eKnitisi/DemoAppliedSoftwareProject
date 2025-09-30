@@ -1,17 +1,238 @@
-﻿@page "/cities/edit/{Id:int}"
+﻿@page "/cityedit/{CityId:int}"
 @inject HttpClient Http
 @rendermode InteractiveServer
+@using System.Text.Json
+@using System.ComponentModel.DataAnnotations
+@inject NavigationManager Navigation
 
 <PageTitle>Edit a city</PageTitle>
 
-<h1>Cities</h1>
+<h1>Edit City</h1>
 
-@* @if (model == null) { <p>Loading...</p> }
-else {
-    //form
-} *@
+@if (!string.IsNullOrEmpty(message))
+{
+    <div class="mt-3 alert @messageClass">@message</div>
+}
+
+@if (isLoading)
+{
+    <p>Laden...</p>
+}
+else if (city == null)
+{
+    <div class="alert alert-danger">
+        <h4>City not found</h4>
+        <p>De gevraagde stad kon niet worden gevonden.</p>
+        <button class="btn btn-primary" @onclick="GoBackToList">Terug naar lijst</button>
+    </div>
+}
+else
+{
+    <EditForm Model="city" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary class="text-danger" />
+
+        @* naam read-only *@
+        <div class="mb-3">
+            <label for="name" class="form-label">Naam:</label>
+            <InputText id="name" class="form-control" @bind-Value="city.Name" readonly disabled />
+        </div>
+
+        <div class="mb-3">
+            <label for="population" class="form-label">Populatie:</label>
+            <InputNumber id="population" class="form-control" @bind-Value="city.Population" />
+            <ValidationMessage For="@(() => city.Population)" class="text-danger" />
+        </div>
+
+        <div class="mb-3">
+            <label for="country" class="form-label">Land:</label>
+            <InputSelect id="country" class="form-select" @bind-Value="city.CountryId">
+                <option value="0">Selecteer een land...</option>
+                @if (countries != null)
+                {
+                    @foreach (var country in countries)
+                    {
+                        <option value="@country.Id">@country.Name</option>
+                    }
+                }
+            </InputSelect>
+            <ValidationMessage For="@(() => city.CountryId)" class="text-danger" />
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-success" disabled="@isSaving">
+                @if (isSaving)
+                {
+                    <span>Opslaan...</span>
+                }
+                else
+                {
+                    <span>Opslaan</span>
+                }
+            </button>
+            <button type="button" class="btn btn-secondary ms-2" @onclick="GoBackToList">
+                Annuleren
+            </button>
+        </div>
+    </EditForm>
+}
 
 @code {
-    //private CityEditModel model;
+    [Parameter] public int CityId { get; set; }
+
+    private CityEditModel? city;
+    private List<CountryDtoObj>? countries;
+    private bool isLoading = true;
+    private bool isSaving = false;
+    private string message = string.Empty;
+    private string messageClass = "alert-info";
+
+    public class CityEditModel
+    {
+        // deze validatie wordt eigenlijk niet gedaan omdat naam sowieso readonly is
+        [Required(ErrorMessage = "Naam is verplicht")]
+        public string Name { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Populatie is verplicht")]
+        [Range(0, 10000000000, ErrorMessage = "Het aantal inwoners mag niet groter zijn dan 10000000000")]
+        public long Population { get; set; }
+
+        [Required(ErrorMessage = "Land is verplicht")]
+        [Range(1, int.MaxValue, ErrorMessage = "Selecteer een land")]
+        public int CountryId { get; set; }
+    }
+
+    public class CityDtoObj
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public int Population { get; set; }
+        public int CountryId { get; set; }
+    }
+
+    public class CountryDtoObj
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+    }
+
+    public class ErrorResponseInfo
+    {
+        public int StatusCode { get; set; }
+        public string Message { get; set; } = "";
+        public string? ErrorCode { get; set; }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        isLoading = true;
+        message = string.Empty;
+
+        try
+        {
+            var cityTask = Http.GetFromJsonAsync<CityDtoObj>($"api/v1/city/{CityId}");
+            var countriesTask = Http.GetFromJsonAsync<List<CountryDtoObj>>("api/v1/country/allCountries");
+
+            await Task.WhenAll(cityTask, countriesTask);
+
+            var cityDto = await cityTask;
+            countries = await countriesTask;
+
+            if (cityDto != null)
+            {
+                city = new CityEditModel
+                    {
+                        Name = cityDto.Name,
+                        Population = cityDto.Population,
+                        CountryId = cityDto.CountryId
+                    };
+            }
+        }
+        catch (HttpRequestException ex)
+        {
+            if (ex.Message.Contains("404"))
+            {
+                city = null;
+            }
+            else
+            {
+                message = $"Fout bij het laden van de gegevens: {ex.Message}";
+                messageClass = "alert-danger";
+            }
+        }
+        catch (Exception ex)
+        {
+            message = $"Fout bij het laden van de gegevens: {ex.Message}";
+            messageClass = "alert-danger";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        if (city == null) return;
+
+        isSaving = true;
+        message = string.Empty;
+
+        try
+        {
+            var updateCommand = new
+            {
+                Id = CityId,
+                Name = city.Name,
+                Population = city.Population,
+                CountryId = city.CountryId
+            };
+
+            var response = await Http.PutAsJsonAsync($"api/v1/city/{CityId}", updateCommand);
+
+            if (response.IsSuccessStatusCode)
+            {
+                message = "Stad succesvol bijgewerkt!";
+                messageClass = "alert-success";
+
+                await Task.Delay(1500);
+                Navigation.NavigateTo("/citylist");
+            }
+            else
+            {
+                var errorJson = await response.Content.ReadAsStringAsync();
+                var error = JsonSerializer.Deserialize<ErrorResponseInfo>(errorJson);
+
+                if (error != null)
+                {
+                    message = $"Fout bij het bijwerken van de stad: {error.Message}";
+                }
+                else
+                {
+                    message = $"Fout bij het bijwerken van de stad: {response.StatusCode}";
+                }
+                messageClass = "alert-danger";
+            }
+        }
+        catch (Exception ex)
+        {
+            message = $"Fout bij het bijwerken van de stad: {ex.Message}";
+            messageClass = "alert-danger";
+        }
+        finally
+        {
+            isSaving = false;
+        }
+    }
+
+    private void GoBackToList()
+    {
+        Navigation.NavigateTo("/citylist");
+    }
 
 }
