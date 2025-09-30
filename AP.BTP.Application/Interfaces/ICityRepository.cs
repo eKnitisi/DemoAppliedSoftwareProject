@@ -8,10 +8,12 @@ using System.Threading.Tasks;
 
 namespace AP.BTP.Application.Interfaces
 {
-    public interface ICityRepository
+    public interface ICityRepository: IGenericRepository<City>
     {
         public Task<IEnumerable<City>> GetAllCities();
         public Task<City?> GetCityById(int id);
         public Task UpdateCity(City city);
+        public Task<City> GetByIdAsync(int id);
+
     }
 }

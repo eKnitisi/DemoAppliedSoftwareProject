@@ -41,6 +41,10 @@ namespace AP.BTP.WebAPI.Middleware
                     case RelationNotFoundException:
                         response.StatusCode = StatusCodes.Status404NotFound;
                         break;
+                    case LastCityDeletionNotAllowedException:
+                        response.StatusCode = StatusCodes.Status409Conflict;
+                        response.ErrorCode = "CANNOT_DELETE_LAST_CITY";
+                        break;
                     default:
                         response.StatusCode = StatusCodes.Status500InternalServerError;
                         break;
@@ -55,6 +59,7 @@ namespace AP.BTP.WebAPI.Middleware
     public class ErrorResponseInfo
     {
         public int StatusCode { get; set; }
+        public string ErrorCode { get; set; } 
         public string Message { get; set; }
     }
 }

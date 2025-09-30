@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace AP.BTP.Application.Interfaces
 {
-    public interface ICountryRepository
+    public interface ICountryRepository: IGenericRepository<Country>
     {
         public IEnumerable<Country> GetAllCountries();
+
     }
 }

@@ -13,11 +13,11 @@ using AP.BTP.Application.CQRS;
 
 namespace AP.BTP.Infrastructure.Repositories
 {
-    public class CityRepository : ICityRepository
+    public class CityRepository :  GenericRepository<City>,ICityRepository
     {
         private readonly DbContext _BTPContext;
         private readonly DbSet<City> _dbSet;
-        public CityRepository(BTPContext BTPContext)
+        public CityRepository(BTPContext BTPContext): base(BTPContext)
         {
             this._BTPContext = BTPContext;
             _dbSet = _BTPContext.Set<City>();
@@ -37,6 +37,10 @@ namespace AP.BTP.Infrastructure.Repositories
         public async Task<IEnumerable<City>> GetAllCities()
         {
             return await _dbSet.ToListAsync();
+        }
+        public async Task<City> GetByIdAsync(int id)
+        {
+            return await _dbSet.FindAsync(id);
         }
     }
 }

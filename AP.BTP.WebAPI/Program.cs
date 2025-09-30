@@ -1,6 +1,8 @@
 
 using AP.BTP.Application.Extensions;
+using AP.BTP.Application.Interfaces;
 using AP.BTP.Infrastructure.Extensions;
+using AP.BTP.Infrastructure.Services;
 using AP.BTP.WebAPI.Extensions;
 using DotNetEnv;
 
@@ -12,7 +14,6 @@ namespace AP.BTP.WebAPI
         public static void Main(string[] args)
         {
 
-            // Load .env file (defaults to project root .env)
             Env.Load();
             var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,7 @@ namespace AP.BTP.WebAPI
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddSingleton<IEmailService, EmailService>();
 
             var app = builder.Build();
 

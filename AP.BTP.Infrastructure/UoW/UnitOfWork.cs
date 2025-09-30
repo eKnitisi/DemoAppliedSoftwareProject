@@ -10,9 +10,9 @@ namespace AP.BTP.Infrastructure.UoW
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private BTPContext _BTPContext;
-        private ICityRepository _cityRepository;
-        private ICountryRepository _countryRepository;
+        private readonly BTPContext _BTPContext;
+        private readonly ICityRepository _cityRepository;
+        private readonly ICountryRepository _countryRepository;
 
         public UnitOfWork(BTPContext BTPContext, ICityRepository cityRepository, ICountryRepository countryRepository) 
         {
