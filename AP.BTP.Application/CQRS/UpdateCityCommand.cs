@@ -1,5 +1,6 @@
 ﻿using AP.BTP.Application.Interfaces;
 using AutoMapper;
+using FluentValidation;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -13,8 +14,38 @@ namespace AP.BTP.Application.CQRS
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int Population { get; set; }
+        public long Population { get; set; }
         public int CountryId { get; set; }
+    }
+
+    public class UpdateCityCommandValidator : AbstractValidator<UpdateCityCommand>
+    {
+        private IUnitOfWork uow;
+
+        public UpdateCityCommandValidator(IUnitOfWork uow)
+        {
+            this.uow = uow;
+
+            RuleFor(s => s.Name)
+                .NotNull()
+                .WithMessage("City cannot be empty")
+                .MustAsync(async (command, name, cancellation) =>
+                {
+                    var city = await uow.CityRepository
+                                        .FindAsync(c => c.Name.ToLower() == name.ToLower()
+                                                     && c.Id != command.Id);
+                    return city == null;
+                })
+                .WithMessage("The city is already added");
+
+            RuleFor(s => s.Population)
+                .LessThan(10000000000)
+                .WithMessage("Too large of an population");
+
+            RuleFor(s => s.CountryId)
+                .NotNull()
+                .WithMessage("Country cannot be empty");
+        }
     }
 
     public class UpdateCityCommandHandler : IRequestHandler<UpdateCityCommand, bool>
