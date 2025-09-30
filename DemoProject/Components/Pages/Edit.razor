@@ -1,8 +1,10 @@
 ﻿@page "/cities/edit/{Id:int}"
 @inject HttpClient Http
-@using System.Net.Http.Json
+@rendermode InteractiveServer
 
-<h3>Edit stad</h3>
+<PageTitle>Edit a city</PageTitle>
+
+<h1>Cities</h1>
 
 @* @if (model == null) { <p>Loading...</p> }
 else {
