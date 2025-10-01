@@ -1,6 +1,7 @@
 ﻿@page "/addcity"
 @rendermode InteractiveServer
 @inject HttpClient Http
+@inject NavigationManager Navigation
 
 <PageTitle>Add City</PageTitle>
 
@@ -91,6 +92,11 @@
                 city = new CityCreateDTO();
                 editContext = new EditContext(city); 
                 messageStore = new ValidationMessageStore(editContext);
+                _ = Task.Run(async () =>
+                    {
+                        await Task.Delay(2000);
+                        await InvokeAsync(() => Navigation.NavigateTo("/citylist"));
+                    });
             }
             else
             {
