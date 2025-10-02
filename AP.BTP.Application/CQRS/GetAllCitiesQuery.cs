@@ -12,7 +12,9 @@ namespace AP.BTP.Application.CQRS
 {
     public class GetAllCitiesQuery : IRequest<IEnumerable<CityDTO>>
     {
-            
+        public bool SortDesc { get; set; }
+        public GetAllCitiesQuery(bool sortDesc = false) => SortDesc = sortDesc;
+
     }
 
     public class GetAllCitiesQueryHandler : IRequestHandler<GetAllCitiesQuery, IEnumerable<CityDTO>>
@@ -28,7 +30,14 @@ namespace AP.BTP.Application.CQRS
 
         public async Task<IEnumerable<CityDTO>> Handle(GetAllCitiesQuery request, CancellationToken cancellationToken)
         {
-            return mapper.Map<IEnumerable<CityDTO>>(await uow.CityRepository.GetAllCities());
+            var cities = await uow.CityRepository.GetAllCities();
+
+            if (request.SortDesc)
+                cities = cities.OrderByDescending(c => c.Population).ToList();
+            else
+                cities = cities.OrderBy(c => c.Population).ToList();
+
+            return mapper.Map<IEnumerable<CityDTO>>(cities);
         }
     }
 }

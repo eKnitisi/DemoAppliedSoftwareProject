@@ -6,7 +6,7 @@
 
 <PageTitle>Citylist</PageTitle>
 
-<h1>List</h1>
+<h1>Stedenlijst</h1>
 
 @if (!string.IsNullOrEmpty(message))
 {
@@ -19,22 +19,45 @@
 }
 else
 {
-    <ul>
-        @foreach (var city in cities)
-        {
-            <li class="mb-2">
-                @city.Name (@city.Population inwoners)
-                <button class="btn btn-sm btn-primary ms-2" @onclick="() => EditCity(city.Id)">Bewerken</button>
-                <button class="btn btn-sm btn-danger ms-2" @onclick="() => DeleteCity(city)">Verwijderen</button>
-            </li>
-        }
-    </ul>
+    <div class="mb-3">
+        <label for="sortSelect">Sorteer op aantal inwoners: </label>
+        <select id="sortSelect" @bind="sortValue" @bind:after="OnSortChanged">
+            <option value="0">Laag naar hoog</option>
+            <option value="1">Hoog naar laag</option>
+        </select>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Naam</th>
+                <th>Inwoners</th>
+                <th>Acties</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var city in cities)
+            {
+                <tr>
+                    <td>@city.Name</td>
+                    <td>@city.Population</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary me-2" @onclick="() => EditCity(city.Id)">Bewerken</button>
+                        <button class="btn btn-sm btn-danger" @onclick="() => DeleteCity(city)">Verwijderen</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
 
 <button class="btn btn-primary mt-3" @onclick="GoToAddCity">Add City</button>
 
 @code {
     private List<CityDtoObj>? cities;
+    private int sortValue = 0; 
+    private bool sortDescending => sortValue == 1;
+
     private string message;
     private string messageClass = "alert-info";
 
@@ -55,7 +78,18 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        cities = await Http.GetFromJsonAsync<List<CityDtoObj>>("api/v1/city/allCities");
+        await LoadCities();
+    }
+
+    private async Task LoadCities()
+    {
+        cities = await Http.GetFromJsonAsync<List<CityDtoObj>>(
+            $"api/v1/city/allCities?sortDesc={sortDescending}");
+    }
+
+    private async Task OnSortChanged()
+    {
+        await LoadCities();
     }
 
     private void EditCity(int cityId)
@@ -78,7 +112,6 @@ else
             }
             else
             {
-                // Deserialize JSON error response
                 var errorJson = await response.Content.ReadAsStringAsync();
                 var error = JsonSerializer.Deserialize<ErrorResponseInfo>(errorJson);
 

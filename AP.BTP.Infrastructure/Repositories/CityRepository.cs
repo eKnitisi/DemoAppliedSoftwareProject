@@ -36,7 +36,7 @@ namespace AP.BTP.Infrastructure.Repositories
         }
         public async Task<IEnumerable<City>> GetAllCities()
         {
-            return await _dbSet.ToListAsync();
+            return await _dbSet.Include(c => c.Country).ToListAsync();
         }
         public async Task<City> GetByIdAsync(int id)
         {
