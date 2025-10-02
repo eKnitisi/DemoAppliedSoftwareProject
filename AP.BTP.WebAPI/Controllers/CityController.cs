@@ -34,10 +34,10 @@ namespace AP.BTP.WebAPI.Controllers
         }
         
         [HttpGet("allCities")]
-        public async Task<IActionResult> GetAllCities()
+        public async Task<IActionResult> GetAllCities([FromQuery] bool sortDesc = false)
         {
-            return Ok(await mediator.Send(new GetAllCitiesQuery()));
-
+            var result = await mediator.Send(new GetAllCitiesQuery(sortDesc));
+            return Ok(result);
         }
 
         [HttpGet("{id}")]

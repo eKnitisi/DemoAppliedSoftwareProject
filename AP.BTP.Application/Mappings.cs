@@ -15,7 +15,8 @@ namespace AP.BTP.Application
         {
             CreateMap<CityCreateDTO, City>();
 
-            CreateMap<City, CityDTO>();
+            CreateMap<City, CityDTO>()
+                .ForMember(dest => dest.CountryName, opt => opt.MapFrom(src => src.Country.Name));
 
             CreateMap<Country, CountryDTO>();
 

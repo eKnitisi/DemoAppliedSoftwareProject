@@ -1,18 +1,10 @@
 ﻿@page "/"
-
-<PageTitle>Home</PageTitle>
-
-<h1>All cities</h1>
-
-<p>A list of cities, sortable by population.</p>
-
-
-
+@inject NavigationManager Navigation
 
 @code {
-
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
 
+        Navigation.NavigateTo("/citylist", forceLoad: false);
     }
 }
